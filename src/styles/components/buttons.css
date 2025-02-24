@@ -1,0 +1,13 @@
+.link-btn {
+  display: block;
+  text-decoration: none;
+  background-color: var(--light-color);
+  color: var(--dark-text);
+  padding: 10px 20px;
+  border-radius: 6px;
+  width: fit-content;
+}
+
+.link-btn--bold {
+  font-weight: bold;
+}

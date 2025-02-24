@@ -1,0 +1,15 @@
+:root {
+  --color-primary: #235a41;
+  --dark-text: #111827;
+  --gray-text: #4b5563;
+  --link-color: #2563eb;
+  --title-color: #0f172a;
+  --light-color: #fff;
+  --accent-light: #f5f5f5;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Definir colores */
+  }
+}

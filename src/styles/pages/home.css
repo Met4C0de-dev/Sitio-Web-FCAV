@@ -1,0 +1,25 @@
+.banner-home {
+  background: url(../../assets/banner.jpg);
+  background-size: cover;
+  background-position: center;
+  background-color: rgba(0, 0, 0, 0.444);
+  background-blend-mode: darken;
+  height: 500px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.banner-home__content-box {
+  width: 100%;
+}
+.banner-home__welcome-title {
+  color: var(--light-color);
+  font-size: 40px;
+}
+.banner-home__description-text {
+  color: var(--light-color);
+  font-size: 20px;
+  margin: 20px 0;
+}
