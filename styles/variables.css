@@ -21,19 +21,6 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --primary: #1e3a3a;
-    --dark-text: #e5e7eb;
-    --gray-text: #9ca3af;
-    --link-color: #3b82f6;
-    --title-color: #e2e8f0;
-    --light-color: #1f2937;
-    --accent-light: #374151;
-    --background: #1f2937;
-    --background-alt: #111827;
-    --border: #374151;
-    --shadow: rgba(255, 255, 255, 0.1);
-    --success: #34d399;
-    --footer-bg: #1e3a3a;
-    --footer-text: #e5e7eb;
+
   }
 }
