@@ -15,11 +15,11 @@
   width: 100%;
 }
 .banner-home__welcome-title {
-  color: var(--light-color);
+  color: white;
   font-size: 40px;
 }
 .banner-home__description-text {
-  color: var(--light-color);
+  color: white;
   font-size: 20px;
   margin: 20px 0;
 }
