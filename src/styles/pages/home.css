@@ -87,3 +87,73 @@
 .news-events__link:hover {
     text-decoration: underline;
 }
+
+.footer {
+    background-color: #1c4b30; /* Verde oscuro */
+    color: white;
+    padding: 40px 0;
+    text-align: left;
+    width: 100%;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+ 
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    width: 100%;
+    padding: 20px;
+}
+ 
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+    margin: 10px;
+}
+ 
+.footer-section h4 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: bold;
+}
+ 
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+ 
+.footer-section ul li {
+    margin: 5px 0;
+}
+ 
+.footer-section ul li a {
+    color: white;
+    text-decoration: none;
+}
+ 
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+ 
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+ 
+.social-icons a {
+    color: white;
+    font-size: 20px;
+}
+ 
+.footer-copy {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    padding-top: 15px;
+    width: 100%;
+}
