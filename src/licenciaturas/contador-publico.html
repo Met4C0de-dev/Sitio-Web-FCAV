@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/variables.css" />
+    <link rel="stylesheet" href="../styles/main.css" />
+    <title>Contador Público</title>
+  </head>
+  <body>
+    <header class="global-header">
+      <nav class="global-wrapper nav-bar">
+        <picture>
+          <img src="../assets/Logo_FCAV.png" alt="" />
+        </picture>
+        <ul>
+          <li><a href="../index.html">Inicio</a></li>
+          <li class="dropdown">
+            <a href="#">Oferta Académica</a>
+            <ul class="dropdown-content">
+              <li><a href="./administracion-empresas.html">Licenciatura en Administración</a></li>
+              <li><a href="./contador-publico.html">Licenciatura en Contaduría</a></li>
+              <li><a href="./economia-desarrollo-sustentable.html">Licenciatura en Economia y Desarrollo Sustentable</a></li>
+              <li><a href="./tecnologias-informacion.html">Licenciatura en Informática</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Admisiones</a></li>
+          <li><a href="../eventos.html">Eventos</a></li>
+          <li><a href="#">Centro de investigación</a></li>
+          <li><a href="#">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="program-header">
+        <div class="global-wrapper">
+          <h1>Contador Público</h1>
+        </div>
+      </div>
+
+      <div class="program-content global-wrapper">
+        <div class="program-sidebar">
+          <div class="program-sidebar-item active" onclick="showTab('mision')">Misión</div>
+          <div class="program-sidebar-item" onclick="showTab('vision')">Visión</div>
+          <div class="program-sidebar-item" onclick="showTab('competencias')">Competencias</div>
+          <div class="program-sidebar-item" onclick="showTab('objetivo')">Objetivo</div>
+          <div class="program-sidebar-item" onclick="showTab('valores')">Valores y Actitudes</div>
+          <div class="program-sidebar-item" onclick="showTab('perfil-ingreso')">Perfil de Ingreso</div>
+          <div class="program-sidebar-item" onclick="showTab('perfil-egreso')">Perfil de Egreso</div>
+          <div class="program-sidebar-item" onclick="showTab('documentacion')">Documentación Necesaria</div>
+          <div class="program-sidebar-item" onclick="showTab('plan-estudios')">Plan de estudios</div>
+        </div>
+
+        <div class="program-content-detail">
+          <div id="mision" class="tab-content active">
+            <h2>Misión</h2>
+            <p>
+              Formar profesionales en las áreas de contabilidad y finanzas, con responsabilidad social y cuidado del
+              ambiente, capacidad analítica, creativa, liderazgo y actitud emprendedora, con competencias en las
+              áreas de contabilidad, auditoría, finanzas, fiscal y costos, para tomar decisiones congruentes con el
+              tiempo, espacio y sociedad en entornos cambiantes y globalizados, con apego a los valores
+              institucionales y a los códigos de ética que regulan su desempeño, con el compromiso de contribuir al
+              desarrollo de Tamaulipas y de México.
+            </p>
+          </div>
+
+          <div id="vision" class="tab-content">
+            <h2>Visión</h2>
+            <p>
+              Ser un programa educativo reconocido a nivel nacional e internacional por su calidad académica,
+              formando profesionales competitivos en el área contable y financiera, con capacidad para adaptarse a
+              los cambios del entorno económico y social, contribuyendo al desarrollo sustentable de la región y del
+              país.
+            </p>
+          </div>
+
+          <div id="competencias" class="tab-content">
+            <h2>Competencias</h2>
+            <ul>
+              <li>Elaborar estados financieros de acuerdo a las normas de información financiera</li>
+              <li>Analizar e interpretar información financiera para la toma de decisiones</li>
+              <li>Diseñar y evaluar sistemas de control interno</li>
+              <li>Aplicar disposiciones fiscales vigentes</li>
+              <li>Diseñar sistemas de costos y presupuestos</li>
+              <li>Realizar auditorías financieras y fiscales</li>
+            </ul>
+          </div>
+
+          <div id="objetivo" class="tab-content">
+            <h2>Objetivo</h2>
+            <p>
+              Formar profesionales con conocimientos sólidos en contabilidad, auditoría, finanzas, fiscal y costos,
+              capaces de analizar, interpretar y aplicar la información financiera para la toma de decisiones en las
+              organizaciones, con un enfoque ético y de responsabilidad social.
+            </p>
+          </div>
+
+          <div id="valores" class="tab-content">
+            <h2>Valores y Actitudes</h2>
+            <ul>
+              <li>Ética profesional</li>
+              <li>Responsabilidad social</li>
+              <li>Honestidad</li>
+              <li>Compromiso</li>
+              <li>Trabajo en equipo</li>
+              <li>Liderazgo</li>
+              <li>Actitud emprendedora</li>
+            </ul>
+          </div>
+
+          <div id="perfil-ingreso" class="tab-content">
+            <h2>Perfil de Ingreso</h2>
+            <p>
+              El aspirante a ingresar al programa educativo de Contador Público deberá contar con:
+            </p>
+            <ul>
+              <li>Conocimientos básicos de matemáticas</li>
+              <li>Habilidades para el análisis y síntesis de información</li>
+              <li>Capacidad para trabajar en equipo</li>
+              <li>Interés por las áreas económico-administrativas</li>
+              <li>Disposición para el aprendizaje continuo</li>
+            </ul>
+          </div>
+
+          <div id="perfil-egreso" class="tab-content">
+            <h2>Perfil de Egreso</h2>
+            <p>
+              El egresado del programa educativo de Contador Público será capaz de:
+            </p>
+            <ul>
+              <li>Elaborar e interpretar información financiera</li>
+              <li>Diseñar y evaluar sistemas de control interno</li>
+              <li>Aplicar disposiciones fiscales</li>
+              <li>Realizar auditorías financieras y fiscales</li>
+              <li>Diseñar sistemas de costos y presupuestos</li>
+              <li>Tomar decisiones financieras</li>
+              <li>Trabajar en equipos multidisciplinarios</li>
+            </ul>
+          </div>
+
+          <div id="documentacion" class="tab-content">
+            <h2>Documentación Necesaria</h2>
+            <ul>
+              <li>Certificado de bachillerato (original y copia)</li>
+              <li>Acta de nacimiento (original y copia)</li>
+              <li>CURP (copia)</li>
+              <li>Identificación oficial (copia)</li>
+              <li>6 fotografías tamaño infantil</li>
+              <li>Comprobante de domicilio (copia)</li>
+              <li>Pago de derechos</li>
+            </ul>
+          </div>
+
+          <div id="plan-estudios" class="tab-content">
+            <h2>Plan de estudios</h2>
+            <p>
+              El plan de estudios de la Licenciatura en Contaduría Pública consta de 9 semestres, con un total de 45
+              asignaturas y 350 créditos.
+            </p>
+            <h3>Primer Semestre</h3>
+            <ul>
+              <li>Contabilidad Básica</li>
+              <li>Matemáticas Aplicadas a los Negocios</li>
+              <li>Derecho Civil</li>
+              <li>Administración</li>
+              <li>Metodología de la Investigación</li>
+            </ul>
+            <h3>Segundo Semestre</h3>
+            <ul>
+              <li>Contabilidad Intermedia</li>
+              <li>Estadística Descriptiva</li>
+              <li>Derecho Mercantil</li>
+              <li>Economía</li>
+              <li>Informática Aplicada</li>
+            </ul>
+            <p>* El plan de estudios completo puede consultarse en la coordinación del programa.</p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="global-wrapper">
+        <div>
+          <h3>Facultad de Comercio y Administración Victoria</h3>
+          <p>Universidad Autónoma de Tamaulipas</p>
+          <p>Centro Universitario Victoria</p>
+        </div>
+        <div>
+          <h3>Contacto</h3>
+          <p>Teléfono: (834) 123-4567</p>
+          <p>Email: contacto@fcav.uat.edu.mx</p>
+        </div>
+      </div>
+    </footer>
+    <script>
+      function showTab(tabId) {
+        var tabs = document.querySelectorAll('.tab-content');
+        tabs.forEach(function(tab) {
+          tab.classList.remove('active');
+        });
+        document.getElementById(tabId).classList.add('active');
+
+        var sidebarItems = document.querySelectorAll('.program-sidebar-item');
+        sidebarItems.forEach(function(item) {
+          item.classList.remove('active');
+        });
+        document.querySelector('.program-sidebar-item[onclick="showTab(\'' + tabId + '\')"]').classList.add('active');
+      }
+    </script>
+  </body>
+</html>

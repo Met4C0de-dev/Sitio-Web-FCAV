@@ -13,12 +13,20 @@
           <img src="./assets/Logo_FCAV.png" alt="" />
         </picture>
         <ul>
-          <li>Inicio</li>
-          <li>Oferta Acádemica</li>
-          <li>Admisiones</li>
-          <li>Eventos</li>
-          <li>Centro de investigación</li>
-          <li>Contacto</li>
+          <li><a href="./index.html">Inicio</a></li>
+          <li class="dropdown">
+            <a href="#">Oferta Acádemica</a>
+            <ul class="dropdown-content">
+              <li><a href="./licenciaturas/administracion-empresas.html">Licenciatura en Administración</a></li>
+              <li><a href="./licenciaturas/contador-publico.html">Licenciatura en Contaduría</a></li>
+              <li><a href="./licenciaturas/economia-desarrollo-sustentable.html">Licenciatura en Economia y Desarrollo Sustentable</a></li>
+              <li><a href="./licenciaturas/tecnologias-informacion.html">Licenciatura en Informática</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Admisiones</a></li>
+          <li><a href="../src/eventos.html">Eventos</a></li>
+          <li><a href="#">Centro de investigación</a></li>
+          <li><a href="#">Contacto</a></li>
         </ul>
       </nav>
     </header>
@@ -32,35 +40,97 @@
             Formando lideres del mañana
           </p>
 
-          <a href="" class="link-btn link-btn--bold"> Conoce más </a>
+          <a href="#" class="link-btn link-btn--bold"> Conoce más </a>
         </div>
       </section>
 
-      <h1>Prueba</h1>
-      <h1>Prueba</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic expedita
-        omnis, placeat qui laboriosam minima laudantium sint amet vero ab
-        obcaecati molestiae deleniti architecto tempora delectus, sequi
-        perspiciatis ut.
-      </p>
-
-      <h2>Prueba2</h2>
-      <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam hic in
-        doloribus nihil similique incidunt, nobis delectus assumenda velit
-        asperiores unde sint sequi cupiditate! Error voluptatum assumenda
-        officiis voluptas exercitationem. Vitae non sit eius doloribus ea saepe
-        ipsum atque?
-      </p>
+    
     </main>
     <!--Parte media del home-->
-    <main>
-      <div>
-        <p>Hola Tonotos!</p>
+    <section class="news-events">
+      <div class="news-events__menu">
+          <div class="news-events__menu-item">
+              <span>📄</span>
+              <h3 class="news-events__menu-title">Trámites en Línea</h3>
+              <p class="news-events__menu-text">Accede a todos tus trámites académicos</p>
+          </div>
+          <div class="news-events__menu-item">
+              <span>👨‍🎓</span>
+              <h3 class="news-events__menu-title">Portal Estudiantil</h3>
+              <p class="news-events__menu-text">Ingresa a tu área personal</p>
+          </div>
+          <div class="news-events__menu-item">
+              <span>📅</span>
+              <h3 class="news-events__menu-title">Calendario</h3>
+              <p class="news-events__menu-text">Consulta fechas importantes</p>
+          </div>
+          <div class="news-events__menu-item">
+              <span>📂</span>
+              <h3 class="news-events__menu-title">Documentación</h3>
+              <p class="news-events__menu-text">Descarga formatos y documentos</p>
+          </div>
       </div>
-    </main>
+  
+      <div class="news-events__content">
+          <div class="news-events__block news-events__block--news">
+              <h2 class="news-events__title">Noticias Recientes</h2>
+              <div class="news-events__item">
+                  <h3 class="news-events__item-title">Nuevo programa de becas disponible</h3>
+                  <p class="news-events__item-date">15 de Marzo, 2024</p>
+                  <p class="news-events__item-description">Se abre convocatoria para becas de excelencia académica...</p>
+              </div>
+              <div class="news-events__item">
+                  <h3 class="news-events__item-title">Conferencia Internacional</h3>
+                  <p class="news-events__item-date">12 de Marzo, 2024</p>
+                  <p class="news-events__item-description">Expertos internacionales visitarán nuestra facultad...</p>
+              </div>
+              <a href="#" class="news-events__link">Ver todas las noticias →</a>
+          </div>
+  
+          <div class="news-events__block news-events__block--events">
+              <h2 class="news-events__title">Próximos Eventos</h2>
+              <div class="news-events__item">
+                  <h3 class="news-events__item-title">Semana de la Ciencia</h3>
+                  <p class="news-events__item-date">20 de Marzo, 2024 - 09:00 AM</p>
+                  <p class="news-events__item-location">Auditorio Principal</p>
+              </div>
+              <div class="news-events__item">
+                  <h3 class="news-events__item-title">Taller de Innovación</h3>
+                  <p class="news-events__item-date">22 de Marzo, 2024 - 02:00 PM</p>
+                  <p class="news-events__item-location">Sala de Conferencias</p>
+              </div>
+              <a href="#" class="news-events__link">Ver calendario completo →</a>
+          </div>
+      </div>
+  </section>  
     <!--Footer de información-->
-    <footer></footer>
+    <footer class="footer">
+      <div class="footer-container">
+          <div class="footer-section">
+              <h4>Contacto</h4>
+              <p> contacto@universidad.edu</p>
+              <p> +52 (834) 31 8 18 00</p>
+              <p> Boulevar Adolfo López Mateos SN, Centro Universitario, 87149 Cdad. Victoria, Tamps.</p>
+          </div>
+          <div class="footer-section">
+              <h4>Enlaces Rápidos</h4>
+              <ul>
+                  <li><a href="#">Directorio</a></li>
+                  <li><a href="#">Biblioteca</a></li>
+                  <li><a href="#">Servicios</a></li>
+                  <li><a href="#">FAQ</a></li>
+              </ul>
+          </div>
+          <div class="footer-section">
+              <h4>Síguenos</h4>
+              <div class="social-icons">
+                  <a href="#"><i class="fab fa-facebook"></i></a>
+                  <a href="#"><i class="fab fa-twitter"></i></a>
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+              </div>
+          </div>
+      </div>
+      <p class="footer-copy">&copy; 2025 FCAV. Todos los derechos reservados.</p>
+  </footer>
   </body>
 </html>
