@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos Académicos</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        input {
+            padding: 8px;
+            width: 250px;
+        }
+        .eventos {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        .evento {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .evento img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        h3 {
+            color: #007bff;
+            margin: 5px 0;
+        }
+        h2 {
+            margin: 5px 0;
+        }
+        p {
+            color: #666;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Eventos</h1>
+        <p>Descubre los próximos eventos académicos</p>
+        <input type="text" placeholder="🔍 Buscar eventos...">
+    </header>
+    <section class="eventos">
+
+        <article class="evento">
+            <img src="eventosImg/festivalmusica.jpg" alt="Festival de Música">
+            <h3>Cultura</h3>
+            <h2>Festival de Música Universitaria</h2>
+            <p>Disfruta de una jornada con bandas estudiantiles y artistas invitados.</p>
+            <p>📅 30 Abr, 18:00 | 📍 Plaza de la Cultura | 👥 500</p>
+        </article>
+
+        <article class="evento">
+            <img src="eventosImg/feriaciencias.jpeg" alt="Feria de Ciencia">
+            <h3>Ciencia</h3>
+            <h2>Feria de Ciencias Universitaria</h2>
+            <p>Exposición de proyectos científicos desarrollados por estudiantes.</p>
+            <p>📅 25 Abr, 09:00 | 📍 Patio Central | 👥 200</p>
+        </article>
+
+        <article class="evento">
+            <img src="eventosImg/startups.jpg" alt="Taller de Startups">
+            <h3>Emprendimiento</h3>
+            <h2>Taller de Creación de Startups</h2>
+            <p>Aprende a desarrollar y escalar tu startup con asesoría de expertos.</p>
+            <p>📅 18 Abr, 14:00 | 📍 Sala de Innovación | 👥 150</p>
+        </article>
+
+        <article class="evento">
+            <img src="eventosImg/IA.jpg" alt="Conferencia sobre IA">
+            <h3>Tecnología</h3>
+            <h2>Conferencia sobre Inteligencia Artificial</h2>
+            <p>Explora los avances más recientes en IA con expertos del sector.</p>
+            <p>📅 10 Abr, 10:00 | 📍 Auditorio Principal | 👥 300</p>
+        </article>
+       
+        <article class="evento">
+            <img src="eventosImg/festival.jpg" alt="Festival Cultural">
+            <h3>Cultura</h3>
+            <h2>Festival Cultural</h2>
+            <p>Celebración cultural con música, danza y gastronomía.</p>
+            <p>📅 5 Abr, 16:00 | 📍 Centro Cultural | 👥 300</p>
+        </article>
+
+        <article class="evento">
+            <img src="eventosImg/deportes.png" alt="Torneo Deportivo Universitario">
+            <h3>Deportes</h3>
+            <h2>Torneo Deportivo Universitario</h2>
+            <p>Competencias deportivas entre facultades.</p>
+            <p>📅 29 Mar, 08:00 | 📍 Complejo Deportivo | 👥 400</p>
+        </article>
+        
+        <article class="evento">
+            <img src="eventosImg/market.jpg" alt="Market Emprendedores">
+            <h3>Emprendimiento</h3>
+            <h2>Market Emprendedores</h2>
+            <p>Feria donde estudiantes presentan sus proyectos innovadores.</p>
+            <p>📅 22 Mar, 10:00 | 📍 Plaza Central | 👥 180</p>
+        </article>
+
+        <article class="evento">
+            <img src="eventosImg/tech.jpeg" alt="Día de Tecnología 2024">
+            <h3>Tecnología</h3>
+            <h2>Día de Tecnología 2024</h2>
+            <p>Explora las últimas tendencias en tecnología con expertos de la industria.</p>
+            <p>📅 15 Mar, 09:00 | 📍 Auditorio Principal | 👥 250</p>
+        </article>
+    
+    </section>
+</body>
+</html>
