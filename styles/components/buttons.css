@@ -1,7 +1,7 @@
 .link-btn {
   display: block;
   text-decoration: none;
-  background-color: var(--light-color);
+  background-color: #fff;
   color: var(--dark-text);
   padding: 10px 20px;
   border-radius: 6px;
