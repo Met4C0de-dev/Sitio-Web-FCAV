@@ -1,152 +1,332 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Eventos Académicos</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="./styles/main.css" />
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background-color: #f4f4f4;
-            padding: 20px;
-        }
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-        input {
-            padding: 8px;
-            width: 250px;
-        }
-        .eventos {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 20px;
-        }
-        .evento {
-            background: white;
-            padding: 15px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .evento img {
-            width: 100%;
-            border-radius: 10px;
-        }
-        h3 {
-            color: #007bff;
-            margin: 5px 0;
-        }
-        h2 {
-            margin: 5px 0;
-        }
-        p {
-            color: #666;
-            font-size: 14px;
-        }
-    </style>
-</head>
-<body>
-    <header class="global-header">
-        <nav class="global-wrapper nav-bar">
-          <picture>
-            <img src="./assets/Logo_FCAV.png" alt="" />
-          </picture>
-          <ul>
-            <li><a href="./index.html">Inicio</a></li>
-            <li class="dropdown">
-              <a href="#">Oferta Acádemica</a>
-              <ul class="dropdown-content">
-                <li><a href="./licenciaturas/administracion-empresas.html">Licenciatura en Administración</a></li>
-                <li><a href="./licenciaturas/contador-publico.html">Licenciatura en Contaduría</a></li>
-                <li><a href="./licenciaturas/economia-desarrollo-sustentable.html">Licenciatura en Economia y Desarrollo Sustentable</a></li>
-                <li><a href="./licenciaturas/tecnologias-informacion.html">Licenciatura en Informática</a></li>
-              </ul>
-            </li>
-            <li><a href="#">Admisiones</a></li>
-            <li><a href="../src/eventos.html">Eventos</a></li>
-            <li><a href="#">Centro de investigación</a></li>
-            <li><a href="#">Contacto</a></li>
-          </ul>
-        </nav>
-      </header>
+      .aside-nav {
+        background-color: var(--primary);
+        display: block;
+        height: 100vh;
+        width: 90px;
+        position: fixed;
+        left: 0;
+        z-index: 9999;
+        top: 0;
+      }
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        background-color: #f4f4f4;
+        padding: 20px;
+      }
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+      input {
+        padding: 8px;
+        width: 250px;
+      }
+      .eventos {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 20px;
+      }
+      .evento {
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 300px;
+      }
+      .evento img {
+        width: 100%;
+        border-radius: 10px;
+      }
 
-    <header>
+      .card-contenido {
+        padding: 10px 20px;
+      }
+
+      .img-content {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+
+      picture {
+        display: block;
+        height: 300px;
+      }
+
+      h3 {
+        color: #007bff;
+        margin: 5px 0;
+      }
+      h2 {
+        margin: 5px 0;
+      }
+      p {
+        color: #666;
+        font-size: 14px;
+      }
+
+      .contenedor-tarjetas {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .content {
+        margin-left: 50px;
+        margin-top: 50px;
+      }
+
+      .nav ul {
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <header class="global-header">
+      <nav class="global-wrapper nav-bar">
+        <picture>
+          <img class="img-content" src="./assets/Logo_FCAV.png" alt="" />
+        </picture>
+        <ul>
+          <li><a href="./index.html">Inicio</a></li>
+          <li class="dropdown">
+            <a href="#">Oferta Acádemica</a>
+            <ul class="dropdown-content">
+              <li>
+                <a href="./licenciaturas/administracion-empresas.html"
+                  >Licenciatura en Administración</a
+                >
+              </li>
+              <li>
+                <a href="./licenciaturas/contador-publico.html"
+                  >Licenciatura en Contaduría</a
+                >
+              </li>
+              <li>
+                <a href="./licenciaturas/economia-desarrollo-sustentable.html"
+                  >Licenciatura en Economia y Desarrollo Sustentable</a
+                >
+              </li>
+              <li>
+                <a href="./licenciaturas/tecnologias-informacion.html"
+                  >Licenciatura en Informática</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li><a href="#">Admisiones</a></li>
+          <li><a href="../src/eventos.html">Eventos</a></li>
+          <li><a href="#">Centro de investigación</a></li>
+          <li><a href="#">Contacto</a></li>
+        </ul>
+      </nav>
+    </header> -->
+
+    <aside class="aside-nav">
+      <nav class="nav">
+        <ul>
+          <li>
+            <a href="./index.html">
+              <svg
+                width="30"
+                height="30"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12.4924 17.4911V10.8253C12.4924 10.6044 12.4046 10.3924 12.2484 10.2362C12.0921 10.0799 11.8801 9.99213 11.6591 9.99213H8.32576C8.10475 9.99213 7.89279 10.0799 7.73651 10.2362C7.58023 10.3924 7.49243 10.6044 7.49243 10.8253V17.4911"
+                  stroke="#9CA3AF"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M2.49316 8.32592C2.49311 8.08351 2.54593 7.84401 2.64796 7.62412C2.75 7.40423 2.89877 7.20925 3.08391 7.05277L8.91641 2.05432C9.21719 1.80011 9.59828 1.66064 9.99209 1.66064C10.3859 1.66064 10.767 1.80011 11.0678 2.05432L16.9003 7.05277C17.0854 7.20925 17.2342 7.40423 17.3362 7.62412C17.4382 7.84401 17.4911 8.08351 17.491 8.32592V15.8248C17.491 16.2668 17.3154 16.6907 17.0029 17.0032C16.6904 17.3157 16.2666 17.4913 15.8246 17.4913H4.15959C3.71763 17.4913 3.29377 17.3157 2.98125 17.0032C2.66873 16.6907 2.49316 16.2668 2.49316 15.8248V8.32592Z"
+                  stroke="#9CA3AF"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <svg
+                width="30"
+                height="30"
+                viewBox="0 0 21 21"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M13.9414 18.4382V16.7715C13.9414 15.8874 13.5902 15.0396 12.9652 14.4145C12.3402 13.7894 11.4924 13.4382 10.6085 13.4382H5.60922C4.72529 13.4382 3.87757 13.7894 3.25254 14.4145C2.62751 15.0396 2.27637 15.8874 2.27637 16.7715V18.4382"
+                  stroke="#9CA3AF"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M8.10897 10.1062C9.94992 10.1062 11.4423 8.61386 11.4423 6.77291C11.4423 4.93196 9.94992 3.43958 8.10897 3.43958C6.26802 3.43958 4.77563 4.93196 4.77563 6.77291C4.77563 8.61386 6.26802 10.1062 8.10897 10.1062Z"
+                  stroke="#9CA3AF"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M18.9407 18.4381V16.7714C18.9401 16.0329 18.6943 15.3154 18.2418 14.7317C17.7893 14.148 17.1558 13.7311 16.4407 13.5464"
+                  stroke="#9CA3AF"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M13.9412 3.54791C14.6582 3.7315 15.2937 4.1485 15.7475 4.73317C16.2014 5.31785 16.4477 6.03694 16.4477 6.77708C16.4477 7.51722 16.2014 8.23631 15.7475 8.82099C15.2937 9.40566 14.6582 9.82266 13.9412 10.0062"
+                  stroke="#9CA3AF"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <svg
+                width="30"
+                height="30"
+                viewBox="0 0 21 21"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g clip-path="url(#clip0_6_31)">
+                  <path
+                    d="M10.7916 2.58966H10.425C9.98303 2.58966 9.55917 2.76523 9.24665 3.07775C8.93413 3.39026 8.75856 3.81412 8.75856 4.25609V4.40607C8.75826 4.6983 8.68112 4.98531 8.53488 5.23831C8.38863 5.49132 8.17843 5.70141 7.92535 5.84753L7.56707 6.05583C7.31374 6.20209 7.02637 6.27909 6.73385 6.27909C6.44134 6.27909 6.15397 6.20209 5.90064 6.05583L5.77566 5.98917C5.39327 5.76859 4.93898 5.70875 4.51251 5.82279C4.08604 5.93682 3.72225 6.21542 3.50099 6.59742L3.31768 6.91404C3.0971 7.29643 3.03725 7.75072 3.15129 8.17719C3.26533 8.60366 3.54393 8.96745 3.92592 9.18871L4.05091 9.27204C4.30277 9.41744 4.51219 9.62623 4.65836 9.87764C4.80453 10.1291 4.88236 10.4143 4.88412 10.7052V11.1301C4.88529 11.4237 4.80884 11.7125 4.66252 11.9671C4.5162 12.2217 4.30521 12.4331 4.05091 12.5799L3.92592 12.6549C3.54393 12.8761 3.26533 13.2399 3.15129 13.6664C3.03725 14.0929 3.0971 14.5472 3.31768 14.9296L3.50099 15.2462C3.72225 15.6282 4.08604 15.9068 4.51251 16.0208C4.93898 16.1348 5.39327 16.075 5.77566 15.8544L5.90064 15.7878C6.15397 15.6415 6.44134 15.5645 6.73385 15.5645C7.02637 15.5645 7.31374 15.6415 7.56707 15.7878L7.92535 15.9961C8.17843 16.1422 8.38863 16.3523 8.53488 16.6053C8.68112 16.8583 8.75826 17.1453 8.75856 17.4375V17.5875C8.75856 18.0295 8.93413 18.4533 9.24665 18.7659C9.55917 19.0784 9.98303 19.2539 10.425 19.2539H10.7916C11.2336 19.2539 11.6574 19.0784 11.9699 18.7659C12.2825 18.4533 12.458 18.0295 12.458 17.5875V17.4375C12.4583 17.1453 12.5355 16.8583 12.6817 16.6053C12.828 16.3523 13.0382 16.1422 13.2912 15.9961L13.6495 15.7878C13.9029 15.6415 14.1902 15.5645 14.4827 15.5645C14.7753 15.5645 15.0626 15.6415 15.316 15.7878L15.4409 15.8544C15.8233 16.075 16.2776 16.1348 16.7041 16.0208C17.1306 15.9068 17.4944 15.6282 17.7156 15.2462L17.8989 14.9212C18.1195 14.5388 18.1793 14.0845 18.0653 13.6581C17.9513 13.2316 17.6727 12.8678 17.2907 12.6466L17.1657 12.5799C16.9114 12.4331 16.7004 12.2217 16.5541 11.9671C16.4078 11.7125 16.3313 11.4237 16.3325 11.1301V10.7135C16.3313 10.4199 16.4078 10.1311 16.5541 9.87653C16.7004 9.62193 16.9114 9.41052 17.1657 9.2637L17.2907 9.18871C17.6727 8.96745 17.9513 8.60366 18.0653 8.17719C18.1793 7.75072 18.1195 7.29643 17.8989 6.91404L17.7156 6.59742C17.4944 6.21542 17.1306 5.93682 16.7041 5.82279C16.2776 5.70875 15.8233 5.76859 15.4409 5.98917L15.316 6.05583C15.0626 6.20209 14.7753 6.27909 14.4827 6.27909C14.1902 6.27909 13.9029 6.20209 13.6495 6.05583L13.2912 5.84753C13.0382 5.70141 12.828 5.49132 12.6817 5.23831C12.5355 4.98531 12.4583 4.6983 12.458 4.40607V4.25609C12.458 3.81412 12.2825 3.39026 11.9699 3.07775C11.6574 2.76523 11.2336 2.58966 10.7916 2.58966Z"
+                    stroke="#9CA3AF"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M10.6086 13.4219C11.9894 13.4219 13.1086 12.3026 13.1086 10.9219C13.1086 9.54116 11.9894 8.42188 10.6086 8.42188C9.22793 8.42188 8.10864 9.54116 8.10864 10.9219C8.10864 12.3026 9.22793 13.4219 10.6086 13.4219Z"
+                    stroke="#9CA3AF"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_6_31">
+                    <rect
+                      width="19.9971"
+                      height="19.9971"
+                      fill="white"
+                      transform="translate(0.609619 0.922974)"
+                    />
+                  </clipPath>
+                </defs>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="content">
+      <header class="global-wrapper">
         <h1>Eventos</h1>
         <p>Descubre los próximos eventos académicos</p>
-        <input type="text" placeholder="🔍 Buscar eventos...">
-    </header>
-    <section class="eventos">
-
+        <input type="text" placeholder="🔍 Buscar eventos..." />
+      </header>
+      <section class="eventos global-wrapper contenedor-tarjetas">
         <article class="evento">
-            <img src="eventosImg/festivalmusica.jpg" alt="Festival de Música">
+          <picture>
+            <img
+              class="img-content"
+              src="./assets/festival.png"
+              alt="Festival de Música"
+          /></picture>
+          <div class="card-contenido">
             <h3>Cultura</h3>
             <h2>Festival de Música Universitaria</h2>
-            <p>Disfruta de una jornada con bandas estudiantiles y artistas invitados.</p>
+            <p>
+              Disfruta de una jornada con bandas estudiantiles y artistas
+              invitados.
+            </p>
             <p>📅 30 Abr, 18:00 | 📍 Plaza de la Cultura | 👥 500</p>
+          </div>
         </article>
 
         <article class="evento">
-            <img src="eventosImg/feriaciencias.jpeg" alt="Feria de Ciencia">
+          <picture>
+            <img
+              class="img-content"
+              src="./assets/tech.jpg"
+              alt="Feria de Ciencia"
+          /></picture>
+          <div class="card-contenido">
             <h3>Ciencia</h3>
             <h2>Feria de Ciencias Universitaria</h2>
-            <p>Exposición de proyectos científicos desarrollados por estudiantes.</p>
+            <p>
+              Exposición de proyectos científicos desarrollados por estudiantes.
+            </p>
             <p>📅 25 Abr, 09:00 | 📍 Patio Central | 👥 200</p>
+          </div>
         </article>
 
         <article class="evento">
-            <img src="eventosImg/startups.jpg" alt="Taller de Startups">
+          <picture
+            ><img
+              class="img-content"
+              src="./assets/emprendedores.jpeg"
+              alt="Taller de Startups"
+          /></picture>
+          <div class="card-contenido">
             <h3>Emprendimiento</h3>
             <h2>Taller de Creación de Startups</h2>
-            <p>Aprende a desarrollar y escalar tu startup con asesoría de expertos.</p>
+            <p>
+              Aprende a desarrollar y escalar tu startup con asesoría de
+              expertos.
+            </p>
             <p>📅 18 Abr, 14:00 | 📍 Sala de Innovación | 👥 150</p>
+          </div>
         </article>
 
         <article class="evento">
-            <img src="eventosImg/IA.jpg" alt="Conferencia sobre IA">
+          <picture
+            ><img
+              class="img-content"
+              src="./assets/ia.jpeg"
+              alt="Conferencia sobre IA"
+          /></picture>
+          <div class="card-contenido">
             <h3>Tecnología</h3>
             <h2>Conferencia sobre Inteligencia Artificial</h2>
-            <p>Explora los avances más recientes en IA con expertos del sector.</p>
+            <p>
+              Explora los avances más recientes en IA con expertos del sector.
+            </p>
             <p>📅 10 Abr, 10:00 | 📍 Auditorio Principal | 👥 300</p>
+          </div>
         </article>
-       
-        <article class="evento">
-            <img src="eventosImg/festival.jpg" alt="Festival Cultural">
-            <h3>Cultura</h3>
-            <h2>Festival Cultural</h2>
-            <p>Celebración cultural con música, danza y gastronomía.</p>
-            <p>📅 5 Abr, 16:00 | 📍 Centro Cultural | 👥 300</p>
-        </article>
-
-        <article class="evento">
-            <img src="eventosImg/deportes.png" alt="Torneo Deportivo Universitario">
-            <h3>Deportes</h3>
-            <h2>Torneo Deportivo Universitario</h2>
-            <p>Competencias deportivas entre facultades.</p>
-            <p>📅 29 Mar, 08:00 | 📍 Complejo Deportivo | 👥 400</p>
-        </article>
-        
-        <article class="evento">
-            <img src="eventosImg/market.jpg" alt="Market Emprendedores">
-            <h3>Emprendimiento</h3>
-            <h2>Market Emprendedores</h2>
-            <p>Feria donde estudiantes presentan sus proyectos innovadores.</p>
-            <p>📅 22 Mar, 10:00 | 📍 Plaza Central | 👥 180</p>
-        </article>
-
-        <article class="evento">
-            <img src="eventosImg/tech.jpeg" alt="Día de Tecnología 2024">
-            <h3>Tecnología</h3>
-            <h2>Día de Tecnología 2024</h2>
-            <p>Explora las últimas tendencias en tecnología con expertos de la industria.</p>
-            <p>📅 15 Mar, 09:00 | 📍 Auditorio Principal | 👥 250</p>
-        </article>
-    
-    </section>
-</body>
+      </section>
+    </main>
+  </body>
 </html>
